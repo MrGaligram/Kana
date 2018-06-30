@@ -65,14 +65,7 @@ client.on('message', message => { // Message
     user = users[sender.id],
     prefix = serveur.prefix,
     compteur = compteurs["compteurs"],
-    image = images["Images"],
-    empl1,
-    empl2,
-    empl3,
-    empl4,
-    maison = [":maison:",1],
-    labo = [":laboratoire:",0],
-    chateau = [":c_:"];
+    image = images["Images"];
 
 
   if (message.author.bot) return;
@@ -101,8 +94,8 @@ client.on('message', message => { // Message
         return Promise.all(jimps);
       }).then(function (data) {
         data[1].resize(32, 32)
-        data[0].resize(128, 128)
-          .composite(data[1], 64, 64);
+        data[0].resize(2048, 2048)
+          .composite(data[1], 128, 128);
 
         data[0].write('final.jpg', function () {
         });
