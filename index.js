@@ -2,12 +2,12 @@
 // librairies
 const Discord = require('discord.js'),
   client = new Discord.Client(),
-  token = ,
+  token = process.env.TOKEN,
   jimp = require('jimp'),
   fs = require("fs"),
   ytdl = require('ytdl-core'),
   YouTube = require('simple-youtube-api'),
-  youtube = new YouTube(),
+  youtube = new YouTube(process.env.YOUTUBETOKEN),
 
   // Ressources
   Autre = require('./Autre'),
